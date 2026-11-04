@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23500" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23500"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="fill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="root-stk-001">
+                                <rect key="frame" x="20" y="168" width="353" height="516"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cover-img-01">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
+                                        <color key="backgroundColor" red="0.122" green="0.145" blue="0.235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cover-img-01" secondAttribute="height" multiplier="1:1" id="square-cv-01"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="info-stk-01">
+                                        <rect key="frame" x="0.0" y="375" width="353" height="62"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Midnight Drive" textAlignment="center" numberOfLines="2" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="title-lbl-01">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="32"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" red="0.105" green="0.13" blue="0.23" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo Artist" textAlignment="center" numberOfLines="2" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="artist-lbl-01">
+                                                <rect key="frame" x="0.0" y="38" width="353" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubheadline"/>
+                                                <color key="textColor" red="0.43" green="0.45" blue="0.53" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="fill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="controls-stk-01">
+                                        <rect key="frame" x="0.0" y="459" width="353" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="prev-btn-01">
+                                                <rect key="frame" x="0" y="0" width="109.67" height="56"/>
+                                                <color key="backgroundColor" red="0.91" green="0.93" blue="0.98" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="backward.fill" catalog="system"/>
+                                                <connections><action selector="previousTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-prev-01"/></connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="play-btn-01">
+                                                <rect key="frame" x="121.67" y="0" width="109.67" height="56"/>
+                                                <color key="backgroundColor" red="0.29" green="0.33" blue="0.79" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="play.fill" catalog="system"/>
+                                                <connections><action selector="playPauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-play-01"/></connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="next-btn-01">
+                                                <rect key="frame" x="243.34" y="0" width="109.66" height="56"/>
+                                                <color key="backgroundColor" red="0.91" green="0.93" blue="0.98" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="forward.fill" catalog="system"/>
+                                                <connections><action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-next-01"/></connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints><constraint firstAttribute="height" constant="56" id="controls-h-01"/></constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.966" green="0.973" blue="0.99" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="root-stk-001" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="root-left-01"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="root-stk-001" secondAttribute="trailing" constant="20" id="root-right-01"/>
+                            <constraint firstItem="root-stk-001" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="root-mid-01"/>
+                            <constraint firstItem="root-stk-001" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="root-top-min-01"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="root-stk-001" secondAttribute="bottom" constant="12" id="root-bottom-min-01"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coverImageView" destination="cover-img-01" id="out-cover-01"/>
+                        <outlet property="titleLabel" destination="title-lbl-01" id="out-title-01"/>
+                        <outlet property="artistLabel" destination="artist-lbl-01" id="out-artist-01"/>
+                        <outlet property="previousButton" destination="prev-btn-01" id="out-prev-01"/>
+                        <outlet property="playPauseButton" destination="play-btn-01" id="out-play-01"/>
+                        <outlet property="nextButton" destination="next-btn-01" id="out-next-01"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85" y="91"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward.fill" catalog="system" width="128" height="113"/>
+        <image name="forward.fill" catalog="system" width="128" height="113"/>
+        <image name="music.note" catalog="system" width="128" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+    </resources>
+</document>
